@@ -22,10 +22,10 @@ const navLinks = [
   {
     id: 3,
     name: "Contact",
-    href: "#contact",
+    href: "/contact",
     submenu: [
       { title: "Contact", href: "#contact" },
-      { title: "Mail" },
+      { title: "Mail ons", href: "/contact" },
       { title: "Route" },
     ],
   },

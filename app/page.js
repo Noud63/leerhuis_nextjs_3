@@ -3,13 +3,15 @@ import wandelaars3 from '../public/images/wandelaars3.png'
 import General from '@/components/General';
 import Overons from '@/components/Overons';
 import Totop from '@/components/Totop';
-import logo from '../public/icons/leerhuislogo.png'
 import logo2 from '../public/icons/leerhuislogo2.png'
+import Navbar from '@/components/Navbar';
+import Link from 'next/link';
 
 export default function Home() {
   return (
-    <section className="hero flex min-h-screen flex-col">
-      <div className="w-full h-[600px] flex flex-row justify-center items-center bg-gradient-to-t from-[#788884] to-[#d7e2df] pt-10 max-thumbs:h-[400px]">
+    <section className="flex min-h-screen flex-col">
+      <Navbar />
+      <div className="hero w-full h-[600px] flex flex-row justify-center items-center bg-gradient-to-t from-[#839490] to-[#d7e2df] pt-10 max-thumbs:h-[400px]">
         <div className="w-1/2 pt-20 flex flex-col justify-end items-center max-headerimg:w-full max-thumbs:w-[400px]">
           <span className="flex justify-center items-center bg-transparent font-papyrus text-red-900 text-5xl tracking-widest max-thumbs:text-4xl">
             Leerhuis Amsterdam
@@ -19,9 +21,9 @@ export default function Home() {
           </span>
           <div className="flex justify-center items-center bg-transparent">
             <Image
+              priority={true}
               src={wandelaars3}
-              width={620}
-              height={800}
+              style={{ width: 620, height: 'auto' }}
               alt="wandelaars"
               className="pt-4 max-headerimg:w-[510px] max-thumbs:w-[390px]"
             />
@@ -46,8 +48,19 @@ export default function Home() {
                 <br /> We organiseren daarom bijeenkomsten, dialogen en
                 cursussen, in de Muiderkerk, waarin deze werelden elkaar
                 ontmoeten.
+                <br />
               </div>
             </div>
+
+            <Link href="/activiteiten">
+              <button
+                type="button"
+                className="w-40 text-[#d7e2df] bg-gradient-to-t from-black to-[#697c77] rounded-full px-6 py-2 
+              border-t border-[#a8b8b4] shadow:green-950 shadow-lg"
+              >
+                Alle activiteiten
+              </button>
+            </Link>
           </div>
         </div>
       </div>
@@ -78,17 +91,24 @@ export default function Home() {
         contact
       </div>
 
-      <div className="w-full h-[700px] bg-black text-white text-4xl flex items-start justify-center bg-[url('../public/images/overonsbg.png')]">
-        <div className="w-[360px] flex flex-row mt-8">
-          <div className="logo mr-4">
-            <Image src={logo2} width={140} height={100} alt="logo" />
+      <div className="w-full h-[700px] bg-black text-white text-4xl flex items-center justify-center bg-[url('../public/images/overonsbg.png')]">
+        <div className="w-[420px] flex flex-row">
+          <div className="w-1/3 logo mr-4 relative">
+            <Image
+              src={logo2}
+              priority={true}
+              alt="logo"
+              fill
+              sizes="100%"
+              style={{ width: '100%', height: '100%', objectFit: "contain" }}
+            />
           </div>
 
-          <div className="flex flex-col text-sm text-[#a9bab6]">
+          <div className="w-2/3 flex flex-col text-base text-[#a9bab6] leading-7">
             <span>Het Leerhuis Amsterdam</span>
             <span>Linnaeusstraat 37</span>
             <span>1093EG Amsterdam</span>
-            <span>email: leerhuisamsterdam@gmail.com</span>
+            <span>leerhuisamsterdam@gmail.com</span>
           </div>
         </div>
       </div>

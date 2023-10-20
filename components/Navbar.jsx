@@ -8,6 +8,7 @@ import navLinks from "../utils/Menu";
 import DropDown from "./DropDown";
 import Menuoverlay from "./Menuoverlay";
 import logo from '../public/icons/leerhuislogo.png'
+import Link from "next/link";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -35,15 +36,15 @@ const Navbar = () => {
             : "navbar flex justify-between px-20 py-4 transform ease-in-out duration-500 -translate-y-0"
         } max-hamburger:px-8 max-thumbs:h-[70px]`}
       >
-        <div className="cursor-pointer pt-2 max-thumbs:pt-0">
+        <Link href="/" className="cursor-pointer pt-2 max-thumbs:pt-0">
           <Image
+            priority={true}
             src={logo}
-            width={70}
-            height={70}
+            style={{width:"100%", height:"100%"}}
             alt="logo"
             className="max-thumbs:w-[50px]"
           />
-        </div>
+        </Link>
 
         <div className="w-[820px] flex justify-between items-center pl-8 text-md max-hamburger:hidden">
           {navLinks.map((item) => {

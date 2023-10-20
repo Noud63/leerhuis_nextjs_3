@@ -8,12 +8,12 @@
 }
 
 .hero {
-  /* background-image: url("../public/images/headerimage3.png");
-  background-repeat: no-repeat;
-  background-position: center; */
-  /* background: linear-gradient(to bottom,rgb(216,230,227),rgb(89,115,108)); */
+ //background: radial-gradient(rgba(131,148,144), rgba(215,226,223))
 }
 
+body {
+ background-image: radial-gradient(rgba(215,226,223), rgba(131,148,144));
+}
 
 .app {
   margin: 0 auto;
@@ -23,6 +23,7 @@
   align-items: center;
   width: 100%;
   max-width: 1920px;
+ 
 }
 
 .navbar {
@@ -36,6 +37,10 @@
   z-index:5;
   height: 100px;
   /* border-bottom: 1px solid darkgreen; */
+}
+
+.contact {
+//background: radial-gradient(#d7e2df, #839490)
 }
 
 /* .textbox {
