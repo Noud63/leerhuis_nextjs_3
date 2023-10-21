@@ -30,7 +30,7 @@ const Dropdown = ({item, submenu}) => {
               ? "max-h-[160px] opacity-100 w-full"
               : "max-h-0 opacity-0 invisible "
           } 
-       w-full justify-center absolute top-[34px] bg-[rgba(191,207,203)] shadow-lg transition-all duration-300 ease-in-out visible border-b-2 border-green-950`}
+       dropdown w-full justify-center absolute top-[34px] bg-[rgb(203,217,213)] shadow-lg transition-all duration-300 ease-in-out visible border-b-2 border-green-950`}
         >
           {submenu &&
             submenu.map((item, index) => (

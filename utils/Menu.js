@@ -4,9 +4,9 @@ const navLinks = [
     name: "Over ons",
     href: "#about",
     submenu: [
-      { title: "Over Ons", href: "#about" },
-      { title: "Organisatie" },
-      { title: "Doelstelling" },
+      { title: "Over Ons", href: "/about" },
+      { title: "Organisatie", href: "" },
+      { title: "Doelstelling", href: "" },
     ],
   },
   {
@@ -14,19 +14,19 @@ const navLinks = [
     name: "Agenda",
     href: "#agenda",
     submenu: [
-      { title: "Agenda", href: "#agenda" },
-      { title: "Recent" },
-      { title: "Historie" },
+      { title: "Agenda", href: "/agenda" },
+      { title: "Recent", href: ""},
+      { title: "Historie", href: "" },
     ],
   },
   {
     id: 3,
     name: "Contact",
-    href: "/contact",
+    href: "#contact",
     submenu: [
-      { title: "Contact", href: "#contact" },
+      { title: "Contact", href: "/contact" },
       { title: "Mail ons", href: "/contact" },
-      { title: "Route" },
+      { title: "Route", href: "" },
     ],
   },
   {
@@ -34,9 +34,9 @@ const navLinks = [
     name: "Activiteiten",
     href: "#activiteiten",
     submenu: [
-      { title: "Activiteiten", href: "#activiteiten" },
+      { title: "Activiteiten", href: "/activiteiten" },
       { title: "Agenda", href: "#agenda" },
-      { title: "Programma" },
+      { title: "Programma", href: "" },
     ],
   },
 ];

@@ -3,9 +3,9 @@ import wandelaars3 from '../public/images/wandelaars3.png'
 import General from '@/components/General';
 import Overons from '@/components/Overons';
 import Totop from '@/components/Totop';
-import logo2 from '../public/icons/leerhuislogo2.png'
 import Navbar from '@/components/Navbar';
 import Link from 'next/link';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
@@ -33,7 +33,7 @@ export default function Home() {
         <div
           className="w-1/2 flex flex-col justify-center items-center max-md:flex-col
          max-herotext:hidden"
-        >
+           >
           <div className="w-[60%] flex justify-center items-center flex-col pt-10">
             <span className="w-80 text-xl text-green-950 flex justify-center items-center font-semibold border-b border-green-950 pb-2 mb-2">
               Over het Leerhuis
@@ -91,27 +91,7 @@ export default function Home() {
         contact
       </div>
 
-      <div className="w-full h-[700px] bg-black text-white text-4xl flex items-center justify-center bg-[url('../public/images/overonsbg.png')]">
-        <div className="w-[420px] flex flex-row">
-          <div className="w-1/3 logo mr-4 relative">
-            <Image
-              src={logo2}
-              priority={true}
-              alt="logo"
-              fill
-              sizes="100%"
-              style={{ width: '100%', height: '100%', objectFit: "contain" }}
-            />
-          </div>
-
-          <div className="w-2/3 flex flex-col text-base text-[#a9bab6] leading-7">
-            <span>Het Leerhuis Amsterdam</span>
-            <span>Linnaeusstraat 37</span>
-            <span>1093EG Amsterdam</span>
-            <span>leerhuisamsterdam@gmail.com</span>
-          </div>
-        </div>
-      </div>
+     <Footer />
 
       <Totop />
     </section>

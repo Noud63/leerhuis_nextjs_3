@@ -27,6 +27,10 @@ const Navbar = () => {
     setShowMenuOverlay(true);
   };
 
+  const closeMenu = () => {
+    setShowMenuOverlay(false);
+  };
+
   return (
     <>
       <div
@@ -43,6 +47,7 @@ const Navbar = () => {
             style={{width:"100%", height:"100%"}}
             alt="logo"
             className="max-thumbs:w-[50px]"
+            onClick={closeMenu}
           />
         </Link>
 
@@ -52,6 +57,7 @@ const Navbar = () => {
             return <DropDown key={item.id} item={item} submenu={submenu} />;
           })}
         </div>
+
         <div className="max-hamburger:block pt-2 hamburger:hidden cursor-pointer max-thumbs:pt-1">
           <Image
             src={hamburger}

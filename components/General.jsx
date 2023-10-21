@@ -11,7 +11,7 @@ const General = () => {
     <section className="w-full h-[700px] flex flex-row max-herotext:flex-col max-herotext:h-auto bg-white">
       <div className="w-1/2 h-[700px] bg-[url('../public/images/overonsbg.png')] bg-no-repeat py-20 px-20 max-herotext:w-full max-herotext:h-auto">
         <span className="w-full flex justify-center text-xl text-red-800 font-semibold">
-          Lorem Ipsum, where does it come from?{" "}
+          Lorem Ipsum, where does it come from?
         </span>
         <br />
         <div className="text-red-800 mt-8">
@@ -85,6 +85,7 @@ const General = () => {
             />
           </div>
         </div>
+       
       </div>
     </section>
   );

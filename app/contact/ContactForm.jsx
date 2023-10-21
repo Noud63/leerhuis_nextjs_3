@@ -1,6 +1,6 @@
 "use client"
 
-import React from 'react'
+import { useRouter } from "next/navigation";
 
 const ContactForm = () => {
 
@@ -24,6 +24,7 @@ const ContactForm = () => {
 
        if(res.ok){
          console.log("Message sent successfully")
+         router.push("/");
        }
 
        if (!res.ok) {

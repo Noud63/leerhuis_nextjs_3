@@ -1,5 +1,6 @@
 import Navbar from '@/components/Navbar';
 import '../styles/globals.css'
+import Footer from '@/components/Footer';
 
 export const metadata = {
   title: 'Leerhuis_Nextjs_3',
@@ -12,6 +13,7 @@ export default function RootLayout({ children }) {
       <body>
         <Navbar />
         <main className="app">{children}</main>
+        <Footer />
       </body>
     </html>
   );
