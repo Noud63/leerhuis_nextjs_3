@@ -48,6 +48,7 @@ const Navbar = () => {
             alt="logo"
             className="max-thumbs:w-[50px]"
             onClick={closeMenu}
+            
           />
         </Link>
 

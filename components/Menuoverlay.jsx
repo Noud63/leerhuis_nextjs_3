@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import Image from "next/image";
 import close from "../public/icons/close.png";
 import logo3 from "../public/icons/leerhuislogo3.png";
@@ -9,8 +8,8 @@ import OverlayLinks from "./OverlayLinks";
 const Menuoverlay = ({ setShowMenuOverlay, showMenuOverlay }) => {
 
   const closeMenu = () => {
-    setShowMenuOverlay(false);
-  };
+       setShowMenuOverlay(false);
+    };
 
   return (
     <div
@@ -31,12 +30,18 @@ const Menuoverlay = ({ setShowMenuOverlay, showMenuOverlay }) => {
       </div>
 
       <div className="grid grid-cols-2 grid-rows-2 w-full gap-4 px-4 max-thumbs:grid-cols-1">
-        {navLinks.map( (item, index) => {
-          const { submenu } = item
-           return <OverlayLinks key={index} submenu={submenu} item={item} closeMenu={closeMenu} />
-        } )}
+        {navLinks.map((item, index) => {
+          const { submenu } = item;
+          return (
+            <OverlayLinks
+              key={index}
+              submenu={submenu}
+              item={item}
+              closeMenu={closeMenu}
+            />
+          );
+        })}
       </div>
-      
     </div>
   );
 };

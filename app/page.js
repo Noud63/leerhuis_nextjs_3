@@ -5,7 +5,6 @@ import Overons from '@/components/Overons';
 import Totop from '@/components/Totop';
 import Navbar from '@/components/Navbar';
 import Link from 'next/link';
-import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
@@ -62,6 +61,7 @@ export default function Home() {
               </button>
             </Link>
           </div>
+
         </div>
       </div>
 
@@ -90,8 +90,6 @@ export default function Home() {
       >
         contact
       </div>
-
-     <Footer />
 
       <Totop />
     </section>
