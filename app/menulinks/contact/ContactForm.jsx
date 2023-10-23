@@ -1,37 +1,40 @@
-"use client"
+"use client";
 
 import { useRouter } from "next/navigation";
 
 const ContactForm = () => {
+  const router = useRouter();
 
-     const submitHandler = async (e) => {
-       e.preventDefault();
-       const data = {
-         name: e.target.name.value,
-         email: e.target.email.value,
-         message: e.target.message.value,
-       };
+  const submitHandler = async (e) => {
+    e.preventDefault();
+    const data = {
+      name: e.target.name.value,
+      email: e.target.email.value,
+      message: e.target.message.value,
+    };
 
-       console.log(data);
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
 
-       const res = await fetch('api/contact', {
-           method: "POST",
-           headers: {
-            "Content-Type": "application/json",
-           },
-           body: JSON.stringify(data)
-       })
+    console.log(res.json())
 
-       if(res.ok){
-         console.log("Message sent successfully")
-         router.push("/");
-       }
+    if (res.ok) {
+      console.log("Message sent successfully");
+      e.target.name.value = "";
+      e.target.email.value = "";
+      e.target.message.value = "";
+      router.push("/");
+    }
 
-       if (!res.ok) {
-         console.log("Error sending message");
-       }
-     };
-
+    if (!res.ok) {
+      console.log("Error sending message");
+    }
+  };
 
   return (
     <form onSubmit={submitHandler}>
@@ -75,6 +78,6 @@ const ContactForm = () => {
       </button>
     </form>
   );
-}
+};
 
-export default ContactForm
+export default ContactForm;

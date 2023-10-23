@@ -51,7 +51,7 @@ export default function Home() {
               </div>
             </div>
 
-            <Link href="/activiteiten">
+            <Link href="/menulinks/activiteiten">
               <button
                 type="button"
                 className="w-40 text-[#d7e2df] bg-gradient-to-t from-black to-[#697c77] rounded-full px-6 py-2 

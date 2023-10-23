@@ -1,4 +1,5 @@
 "use client";
+
 import Image from "next/image";
 import close from "../public/icons/close.png";
 import logo3 from "../public/icons/leerhuislogo3.png";
