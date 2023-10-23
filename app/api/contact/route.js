@@ -45,6 +45,6 @@ const mail = await transporter.sendMail(mailOptions, (err, result) => {
   }
 });
 
-return NextResponse.json({message: "Mail sent successfully", status: 200})
+   return NextResponse.json({message: "Mail sent successfully", status: 200})
 
 }

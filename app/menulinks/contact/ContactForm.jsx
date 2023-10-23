@@ -1,8 +1,12 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 const ContactForm = () => {
+
+  const [showSuccess, setShowSuccess] = useState(false)
+  const [showError, setShowError] = useState(false)
   const router = useRouter();
 
   const submitHandler = async (e) => {
@@ -21,19 +25,27 @@ const ContactForm = () => {
       body: JSON.stringify(data),
     });
 
-    console.log(res.json())
 
     if (res.ok) {
+
       console.log("Message sent successfully");
-      e.target.name.value = "";
-      e.target.email.value = "";
-      e.target.message.value = "";
-      router.push("/");
+
+      setShowSuccess(true)
+
+      setTimeout(()=> {
+      setShowSuccess(false);
+       router.push("/");
+      },3000)
+      
     }
 
     if (!res.ok) {
       console.log("Error sending message");
-    }
+        setShowError(true);
+         setTimeout(() => {
+           setShowError(false);
+         }, 3000);
+      }
   };
 
   return (
@@ -76,6 +88,21 @@ const ContactForm = () => {
       >
         Verzend
       </button>
+
+      {showSuccess ? 
+        <div
+          className="w-full flex justify-center text-[#d7e2df] bg-gradient-to-t from-black to-[#697c77] py-3 
+              border-t border-[#a8b8b4] shadow:green-950 shadow-lg mt-2"
+        >
+          Bericht succesvol verstuurd!
+        </div> : ""}
+
+        {showError ? <div
+          className="w-full flex justify-center text-[#d7e2df] bg-gradient-to-t from-red-950 to-red-800 py-3 
+              border-t border-[#a8b8b4] shadow:green-950 shadow-lg mt-2"
+        >
+          Bericht niet verstuurd!
+        </div> : ""}
     </form>
   );
 };
