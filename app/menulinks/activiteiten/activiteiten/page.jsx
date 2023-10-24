@@ -9,7 +9,9 @@ const Activiteiten = () => {
         <span className="w-full mt-[40px] flex justify-center text-green-950 text-2xl font-semibold">
           Al onze activiteiten
         </span>
-        <div className="w-full max-w-[620px] min-h-screen bg-white mt-4">&nbsp;</div>
+        <div className="w-full max-w-[620px] min-h-screen bg-transparent mt-4 border-t border-b border-green-950">
+          &nbsp;
+        </div>
       </div>
     </>
   );

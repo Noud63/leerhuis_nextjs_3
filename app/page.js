@@ -1,5 +1,7 @@
 import Image from 'next/image'
 import wandelaars3 from '../public/images/wandelaars3.png'
+import muiderkerk1 from '../public/images/muiderkerk1.jpg'
+import muiderkerk2 from '../public/images/muiderkerk2.jpg'
 import General from '@/components/General';
 import Overons from '@/components/Overons';
 import Totop from '@/components/Totop';
@@ -8,11 +10,10 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <section className="flex min-h-screen flex-col">
-      <Navbar />
-      <div className="hero w-full h-[600px] flex flex-row justify-center items-center bg-gradient-to-t from-[#839490] to-[#d7e2df] pt-10 max-thumbs:h-[400px]">
-        <div className="w-1/2 pt-20 flex flex-col justify-end items-center max-headerimg:w-full max-thumbs:w-[400px]">
-          <span className="flex justify-center items-center bg-transparent font-papyrus text-red-900 text-5xl tracking-widest max-thumbs:text-4xl">
+    <section className="flex justify-center min-h-screen flex-col">
+      <div className="hero w-full h-[500px] flex flex-row justify-center items-center bg-gradient-to-t from-[#9fafab] to-[#f3f8f7] pt-10 max-thumbs:h-[400px] max-mobile:h-[320px]">
+        <div className="w-1/2 flex flex-col justify-end items-center max-headerimg:w-full max-thumbs:w-[400px] max-mobile:max-w-[320px] pt-20 max-mobile:pt-10">
+          <span className="flex justify-center items-center bg-transparent font-papyrus text-red-900 text-5xl tracking-widest max-thumbs:text-4xl max-mobile:text-[1.85rem]">
             Leerhuis Amsterdam
           </span>
           <span className="flex justify-center items-center bg-transparent text-red-900 text-lg font-bold tracking-widest max-thumbs:text-base">
@@ -22,7 +23,7 @@ export default function Home() {
             <Image
               priority={true}
               src={wandelaars3}
-              style={{ width: 620, height: 'auto' }}
+              style={{ width: 620, height: "auto" }}
               alt="wandelaars"
               className="pt-4 max-headerimg:w-[510px] max-thumbs:w-[390px]"
             />
@@ -32,7 +33,7 @@ export default function Home() {
         <div
           className="w-1/2 flex flex-col justify-center items-center max-md:flex-col
          max-herotext:hidden"
-           >
+        >
           <div className="w-[60%] flex justify-center items-center flex-col pt-10">
             <span className="w-80 text-xl text-green-950 flex justify-center items-center font-semibold border-b border-green-950 pb-2 mb-2">
               Over het Leerhuis
@@ -61,7 +62,6 @@ export default function Home() {
               </button>
             </Link>
           </div>
-
         </div>
       </div>
 
@@ -69,14 +69,17 @@ export default function Home() {
 
       <div
         id="agenda"
-        className="w-full h-[700px] bg-[#a9bab6] text-4xl flex items-center justify-center text-green-950"
+        className="w-full h-[700px] bg-[#9fafab] text-4xl flex items-center justify-center text-green-950"
       >
         Agenda
       </div>
 
       <Overons />
 
-      <div className="w-full h-[700px] bg-[url('../public/images/muiderkerk3.jpg')] bg-center"></div>
+      <div className="w-full h-[700px] flex flex-row">
+        {/* <div className="w-full max-w-[900px] h-auto bg-[url('../public/images/muiderkerk1.jpg')] bg-cover max-headerimg:hidden"></div> */}
+        <div className="w-full max-w-[1980px] h-auto bg-[url('../public/images/muiderkerk2.jpg')] bg-center max-headerimg:w-full max-headerimg:bg-center"></div>
+      </div>
 
       <div
         id="activiteiten"
@@ -86,12 +89,12 @@ export default function Home() {
       </div>
       <div
         id="contact"
-        className="w-full h-[700px] bg-[#a9bab6] text-green-950 text-4xl flex items-center justify-center"
+        className="w-full h-[700px] bg-[#9fafab] text-green-950 text-4xl flex items-center justify-center"
       >
         contact
       </div>
 
-      <Totop />
+      {/* <Totop /> */}
     </section>
   );
 }

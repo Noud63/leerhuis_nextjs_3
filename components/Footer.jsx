@@ -5,7 +5,7 @@ import logo2 from "../public/icons/leerhuislogo2.png";
 
 const Footer = () => {
   return (
-    <div className="w-full h-[700px] bg-black text-white text-4xl flex items-center justify-center bg-[url('../public/images/overonsbg.png')]">
+    <div className="w-full h-[700px] bg-black/90 text-white text-4xl flex items-center justify-center bg-[url('../public/images/overonsbg.png')]">
       <div className="w-[420px] flex flex-row">
         <div className="w-1/3 logo mr-4 relative">
           <Image

@@ -1,13 +1,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import leerhuislogo from "../public/images/leerhuislogo2.png";
 import hamburger from "../public/icons/hamburger.png";
 import Image from "next/image";
 import navLinks from "../utils/Menu";
 import DropDown from "./DropDown";
 import Menuoverlay from "./Menuoverlay";
-import logo from '../public/icons/leerhuislogo.png'
+import logo from "../public/icons/leerhuislogo.png";
 import Link from "next/link";
 
 const Navbar = () => {
@@ -16,11 +15,16 @@ const Navbar = () => {
 
   const handleScroll = () => {
     const offset = window.scrollY;
+    console.log(offset)
     offset > 100 ? setScrolled(true) : setScrolled(false);
   };
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   const openMenu = () => {
@@ -36,19 +40,18 @@ const Navbar = () => {
       <div
         className={`${
           scrolled
-            ? "navbar flex justify-between px-20 py-4 transform ease-in-out duration-500 -translate-y-[100px]"
-            : "navbar flex justify-between px-20 py-4 transform ease-in-out duration-500 -translate-y-0"
-        } max-hamburger:px-8 max-thumbs:h-[70px]`}
+            ? "transform ease-in-out duration-500 -translate-y-[100px]"
+            : "transform ease-in-out duration-500 -translate-y-0"
+        } navbar flex justify-between px-20 py-4 max-hamburger:px-8 max-thumbs:h-[70px] border-b border-green-950/40`}
       >
         <Link href="/" className="cursor-pointer pt-2 max-thumbs:pt-0">
           <Image
             priority={true}
             src={logo}
-            style={{width:"100%", height:"100%"}}
+            style={{ width: "100%", height: "100%" }}
             alt="logo"
             className="max-thumbs:w-[50px]"
             onClick={closeMenu}
-            
           />
         </Link>
 

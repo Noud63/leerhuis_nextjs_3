@@ -15,6 +15,7 @@ module.exports = {
         hamburger: "1100px",
         herotext: "1200px",
         thumbs: "650px",
+        mobile: "420px"
       },
     },
   },
