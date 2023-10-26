@@ -11,11 +11,12 @@ module.exports = {
         papyrus: ["PAPYRUS"],
       },
       screens: {
-        headerimg: "1050px",
-        hamburger: "1100px",
+        xxl: "1500px",
         herotext: "1200px",
+        hamburger: "1100px",
+        headerimg: "1050px",
         thumbs: "650px",
-        mobile: "420px"
+        mobile: "420px",
       },
     },
   },

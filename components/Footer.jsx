@@ -6,7 +6,7 @@ import logo2 from "../public/icons/leerhuislogo2.png";
 const Footer = () => {
   return (
     <div className="w-full h-[700px] bg-black/90 text-white text-4xl flex items-center justify-center bg-[url('../public/images/overonsbg.png')]">
-      <div className="w-[420px] flex flex-row">
+      <div className="w-[420px] flex flex-row justify-center max-xxl:w-[320px]">
         <div className="w-1/3 logo mr-4 relative">
           <Image
             src={logo2}
@@ -18,7 +18,7 @@ const Footer = () => {
           />
         </div>
 
-        <div className="w-2/3 flex flex-col text-base text-[#a9bab6] leading-7">
+        <div className="w-2/3 flex flex-col text-base text-[#a9bab6] leading-7 max-xxl:text-sm">
           <span>Het Leerhuis Amsterdam</span>
           <span>Linnaeusstraat 37</span>
           <span>1093EG Amsterdam</span>

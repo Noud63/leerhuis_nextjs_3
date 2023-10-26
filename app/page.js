@@ -1,18 +1,14 @@
 import Image from 'next/image'
 import wandelaars3 from '../public/images/wandelaars3.png'
-import muiderkerk1 from '../public/images/muiderkerk1.jpg'
-import muiderkerk2 from '../public/images/muiderkerk2.jpg'
 import General from '@/components/General';
 import Overons from '@/components/Overons';
-import Totop from '@/components/Totop';
-import Navbar from '@/components/Navbar';
 import Link from 'next/link';
 
 export default function Home() {
   return (
     <section className="flex justify-center min-h-screen flex-col">
       <div className="hero w-full h-[500px] flex flex-row justify-center items-center bg-gradient-to-t from-[#9fafab] to-[#f3f8f7] pt-10 max-thumbs:h-[400px] max-mobile:h-[320px]">
-        <div className="w-1/2 flex flex-col justify-end items-center max-headerimg:w-full max-thumbs:w-[400px] max-mobile:max-w-[320px] pt-20 max-mobile:pt-10">
+        <div className="w-1/2 flex flex-col justify-end items-center max-headerimg:w-full max-thumbs:w-[400px] max-mobile:max-w-[320px] pt-20 max-mobile:pt-10 max-xxl:w-[580px]">
           <span className="flex justify-center items-center bg-transparent font-papyrus text-red-900 text-5xl tracking-widest max-thumbs:text-4xl max-mobile:text-[1.85rem]">
             Leerhuis Amsterdam
           </span>
@@ -34,12 +30,12 @@ export default function Home() {
           className="w-1/2 flex flex-col justify-center items-center max-md:flex-col
          max-herotext:hidden"
         >
-          <div className="w-[60%] flex justify-center items-center flex-col pt-10">
+          <div className="w-[60%] flex justify-center items-center flex-col pt-10 max-xxl:w-[80%]">
             <span className="w-80 text-xl text-green-950 flex justify-center items-center font-semibold border-b border-green-950 pb-2 mb-2">
               Over het Leerhuis
             </span>
             <div className="w-full flex flex-row justify-center max-md:flex-col">
-              <div className="w-full px-8 pb-8 pt-4 text-green-950 flex flex-col leading-2 text-md">
+              <div className="w-full px-8 pb-8 pt-4 text-green-950 flex flex-col leading-2 text-md max-xxl:pb-6">
                 Leerhuis Amsterdam richt zich op zinvol samen leven in een
                 complexe wereld die ons voor veel vragen stelt.
                 <br /> Vanuit de Bijbel en andere bronnen voor oriëntatie en de
@@ -94,7 +90,6 @@ export default function Home() {
         contact
       </div>
 
-      {/* <Totop /> */}
     </section>
   );
 }

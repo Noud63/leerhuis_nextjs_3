@@ -14,7 +14,7 @@ const navLinks = [
     name: "Agenda",
     href: "#agenda",
     submenu: [
-      { title: "Agenda", href: "/menulinks/agenda/agenda" },
+      { title: "Agenda", href: "/menulinks/activiteiten/agenda" },
       { title: "Recent", href: "" },
       { title: "Historie", href: "" },
     ],
@@ -35,7 +35,7 @@ const navLinks = [
     href: "#activiteiten",
     submenu: [
       { title: "Activiteiten", href: "/menulinks/activiteiten/activiteiten" },
-      { title: "Agenda", href: "/menulinks/agenda/agenda" },
+      { title: "Agenda", href: "/menulinks/activiteiten/agenda" },
       { title: "Programma", href: "/menulinks/activiteiten/programma" },
     ],
   },
