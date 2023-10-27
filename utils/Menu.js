@@ -24,8 +24,8 @@ const navLinks = [
     name: "Contact",
     href: "#contact",
     submenu: [
-      { title: "Contact", href: "/menulinks/contact" },
-      { title: "Mail ons", href: "/menulinks/contact" },
+      { title: "Contact", href: "/menulinks/contact/contact" },
+      { title: "Mail ons", href: "/menulinks/contact/mailons" },
       { title: "Route", href: "" },
     ],
   },

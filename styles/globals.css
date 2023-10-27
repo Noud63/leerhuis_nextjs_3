@@ -7,14 +7,6 @@
   src: url("../fonts/papyrus.ttf");
 }
 
-.hero {
- //background: radial-gradient(rgba(131,148,144), rgba(215,226,223))
-}
-
-body {
-
-}
-
 .app {
   background-image: linear-gradient(to top, #525f5c, #e8f0ed);
   margin: 0 auto;

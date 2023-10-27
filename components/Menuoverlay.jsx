@@ -18,7 +18,7 @@ const Menuoverlay = ({ setShowMenuOverlay, showMenuOverlay }) => {
         showMenuOverlay ? "max-w-[500px] right-0" : "-right-[500px] max-w-0"
       }
     overlay fixed flex flex-col justify-start items-start w-1/2 h-screen top-0 bg-[#a7b0a9] z-[999] shadow-lg 
-    transition-all duration-1000 ease-in-out hamburger:hidden`}
+    transition-all duration-1000 ease-in-out hamburger:hidden overflow-y-auto`}
     >
       <div className="w-full flex flex-row justify-between p-4">
         <div className="">

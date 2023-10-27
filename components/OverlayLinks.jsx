@@ -1,11 +1,11 @@
-"use client"
+
 import React from 'react'
 import Link from 'next/link';
 
 const OverlayLinks = ({submenu, item, closeMenu}) => {
 
   return (
-    <div className="w-full flex flex-col items-center mt-8">
+    <div className="w-full flex flex-col items-center mt-6 overflow-y-auto">
       <span className="w-full flex justify-center text-green-950 font-semibold border-b border-green-950 pb-2 mb-2">
         {item.name}
       </span>
@@ -13,7 +13,7 @@ const OverlayLinks = ({submenu, item, closeMenu}) => {
         submenu.map((item, index) => (
           <div
             key={index}
-            className="w-full flex flex-col items-center"
+            className="w-full flex flex-col items-center max-thumbs:"
             onClick={closeMenu}
           >
             <Link href={item.href}>

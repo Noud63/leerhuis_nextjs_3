@@ -1,4 +1,4 @@
-"use client";
+
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,7 +10,7 @@ const Header = () => {
     <>
       <div
         className="w-full flex flex-col justify-end items-center bg-transparent
-      max-headerimg:w-full max-thumbs:max-w-[400px] mt-40 max-mobile:max-w-[410px] max-mobile:px-4 max-mobile:mt-28"
+      max-headerimg:w-full max-thumbs:max-w-[400px] mt-36 max-mobile:max-w-[410px] max-mobile:px-4 max-mobile:mt-28"
       >
         <span className="flex justify-center items-center bg-transparent font-papyrus text-red-900 text-5xl tracking-widest max-thumbs:text-4xl max-mobile:text-[1.85rem]">
           Leerhuis Amsterdam

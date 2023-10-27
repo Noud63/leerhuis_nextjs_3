@@ -4,10 +4,8 @@ import React from "react";
 import Header from "@/components/Header";
 import ContactForm from "./ContactForm";
 
-const Contact = () => {
-
- 
-  return (
+const Mailons = () => {
+return (
     <>
       <Header />
       <div className="contact w-full min-h-screen flex flex-col items-center px-4 max-thumbs:max-w-[430px]">
@@ -22,4 +20,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Mailons;
