@@ -1,7 +1,8 @@
-import Navbar from '@/components/Navbar';
-import '../styles/globals.css'
-import Footer from '@/components/Footer';
-import Totop from '@/components/Totop';
+import Navbar from './components/Navbar';
+import './globals.css'
+import Footer from './components/Footer';
+import Totop from './components/Totop';
+import GetData from './getdata/page';
 
 export const metadata = {
   title: 'Leerhuis_Nextjs_3',
@@ -12,8 +13,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
+       
         <main className="app">
-          <Navbar />
+           <Navbar>
+               <GetData />
+           </Navbar>
           {children}
           <Footer />
         </main>

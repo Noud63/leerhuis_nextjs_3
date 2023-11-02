@@ -1,13 +1,11 @@
 
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
-import logo3 from "../public/icons/leerhuislogo3.png";
-import wandelaars3 from "../public/images/wandelaars3.png";
+import wandelaars3 from "../../public/images/wandelaars3.png";
 
 const Header = () => {
   return (
-    <>
+  
       <div
         className="w-full flex flex-col justify-end items-center bg-transparent
       max-headerimg:w-full max-thumbs:max-w-[400px] mt-36 max-mobile:max-w-[410px] max-mobile:px-4 max-mobile:mt-28"
@@ -28,7 +26,6 @@ const Header = () => {
           />
         </div>
       </div>
-    </>
   );
 };
 

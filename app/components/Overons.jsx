@@ -24,6 +24,6 @@ const Overons = () => {
       </div>
     </section>
   );
-}
+};
 
-export default Overons
+export default Overons;

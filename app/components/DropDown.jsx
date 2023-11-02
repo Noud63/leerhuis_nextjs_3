@@ -1,5 +1,6 @@
 "use client"
 import React,{useState} from 'react'
+import DropdownLinks from './DropdownLinks';
 
 const Dropdown = ({item, submenu}) => {
 
@@ -12,7 +13,6 @@ const Dropdown = ({item, submenu}) => {
       const closeMenu = () => {
         setMenu(false);
       };
-
      
   return (
     
@@ -34,14 +34,7 @@ const Dropdown = ({item, submenu}) => {
         >
           {submenu &&
             submenu.map((item, index) => (
-              <ul
-                key={index}
-                className="w-full flex items-start flex-col py-2 text-green-950 text-md font-normal"
-              >
-                <li className="w-full flex justify-center h-10 cursor-pointer border-b border-green-950 tracking-normal">
-                  <a href={item.href}>{item.title}</a>
-                </li>
-              </ul>
+             <DropdownLinks key={index} item={item}/>
             ))}
         </div>
       </div>

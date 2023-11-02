@@ -1,15 +1,13 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import hamburger from "../public/icons/hamburger.png";
+import hamburger from "../../public/icons/hamburger.png";
 import Image from "next/image";
-import navLinks from "../utils/Menu";
-import DropDown from "./DropDown";
 import Menuoverlay from "./Menuoverlay";
-import logo from "../public/icons/leerhuislogo.png";
+import logo from "../../public/icons/leerhuislogo.png";
 import Link from "next/link";
 
-const Navbar = () => {
+const Navbar = ({children}) => {
   const [scrolled, setScrolled] = useState(false);
   const [showMenuOverlay, setShowMenuOverlay] = useState(false);
 
@@ -55,10 +53,7 @@ const Navbar = () => {
         </Link>
 
         <div className="w-[820px] flex justify-between items-center pl-8 text-md max-hamburger:hidden">
-          {navLinks.map((item) => {
-            const { submenu } = item;
-            return <DropDown key={item.id} item={item} submenu={submenu} />;
-          })}
+          {children}
         </div>
 
         <div className="max-hamburger:block pt-2 hamburger:hidden cursor-pointer max-thumbs:pt-1">
@@ -82,3 +77,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+

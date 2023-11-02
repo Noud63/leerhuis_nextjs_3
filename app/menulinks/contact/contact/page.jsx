@@ -2,7 +2,6 @@ import React from "react";
 import Image from "next/image";
 import logo3 from "../../../../public/icons/leerhuislogo3.png";
 import Link from "next/link";
-import Header from "@/components/Header";
 
 const Contact = () => {
   return (

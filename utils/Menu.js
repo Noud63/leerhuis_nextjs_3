@@ -1,3 +1,6 @@
+"use client"
+//https://vercel.com/guides/loading-static-file-nextjs-api-route
+
 const navLinks = [
   {
     id: 1,
@@ -15,7 +18,7 @@ const navLinks = [
     href: "#agenda",
     submenu: [
       { title: "Agenda", href: "/menulinks/activiteiten/agenda" },
-      { title: "Recent", href: "" },
+      { title: "Aktueel", href: "/menulinks/agenda/aktueel" },
       { title: "Historie", href: "" },
     ],
   },
@@ -40,5 +43,7 @@ const navLinks = [
     ],
   },
 ];
+
+// const testData = JSON.stringify(navLinks)
 
 export default navLinks

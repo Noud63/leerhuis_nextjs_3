@@ -1,7 +1,7 @@
 
-import React from 'react'
-import Image from 'next/image';
-import logo2 from "../public/icons/leerhuislogo2.png";
+import React from "react";
+import Image from "next/image";
+import logo2 from "../../public/icons/leerhuislogo2.png";
 
 const Footer = () => {
   return (
@@ -27,6 +27,6 @@ const Footer = () => {
       </div>
     </div>
   );
-}
+};
 
-export default Footer
+export default Footer;

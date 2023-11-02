@@ -1,8 +1,9 @@
 "use client";
+
 import React,{useState} from "react";
-import Image from "next/image";
-import {images} from "../utils/lightboximages";
+import { images }  from "../../utils/lightboximages";
 import Modal from "./Modal";
+import LightBoxImages from "./LightBoxImages";
 
 const General = () => {
 
@@ -82,21 +83,9 @@ const prevImage = () => {
            bg-[url('../public/images/overonsbg.png')] bg-no-repeat bg-right max-herotext:w-full max-herotext:h-auto py-20"
         >
           <div className="w-auto grid grid-cols-3 grid-rows-2 justify-center items-center gap-9 max-thumbs:grid-cols-2 max-thumbs:gap-4">
-            {images.map((image, index) => {
+            {images && images.map((image, index) => {
               return (
-                <div
-                  key={image.id}
-                  className="w-40 h-40 text-white flex justify-center items-center bg-[#a7b0a9] p-2 border-2 border-white"
-                >
-                  <Image
-                    src={image.img}
-                    width={140}
-                    height={140}
-                    alt={image.alt}
-                    className="object-cover h-full w-auto grayscale hover:grayscale-0 transition-all duration-500 cursor-pointer"
-                    onClick={() => handleImage(image.img, index)}
-                  />
-                </div>
+                <LightBoxImages key={image.id} image={image} index={index} handleImage={handleImage}/>
               );
             })}
           </div>
@@ -111,6 +100,7 @@ const prevImage = () => {
             nextImage={nextImage}
             prevImage={prevImage}
             closeModal={closeModal}
+            index={currentIndex}
           />
         )}
       </div>
