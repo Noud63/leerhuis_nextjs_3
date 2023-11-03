@@ -20,8 +20,8 @@ export default function Home() {
 
       <Overons />
 
-      <div className="w-full h-[700px] flex flex-row">
-        <div className="w-full max-w-[1980px] h-auto bg-[url('../public/images/muiderkerk2.jpg')] bg-center max-headerimg:w-full max-headerimg:bg-center"></div>
+      <div className="w-full h-[700px] flex flex-row max-mobile:h-[400px]">
+        <div className="w-full h-auto bg-[url('../public/images/muiderkerk8.jpg')] bg-center max-mobile:bg-cover max-headerimg:w-full max-headerimg:bg-center"></div>
       </div>
 
       <div

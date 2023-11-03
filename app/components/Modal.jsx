@@ -12,7 +12,7 @@ const Modal = ({currentImage, nextImage, prevImage, closeModal, index}) => {
           className="text-green-950 cursor-pointer absolute -top-[45px]"
           onClick={closeModal}
         >
-          <Image src={close} width={35} height={35} alt="" />
+          <Image src={close} width={35} height={35} alt="" className="drop-shadow-[0px_2px_8px_rgba(0,0,0,0.7)]"/>
         </div>
 
         <div className="relative">

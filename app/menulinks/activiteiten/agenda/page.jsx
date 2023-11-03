@@ -3,7 +3,7 @@ import Header from '@/app/components/Header';
 import Image from 'next/image';
 import roxane from '../../../../public/images/roxane.png'
 import retraite from '../../../../public/images/retraite.png'
-import download from '../../../../public/icons/download.png'
+import download from '../../../../public/icons/downloadred.png'
 
 const Agenda = () => {
 
@@ -22,8 +22,14 @@ const Agenda = () => {
                 11-12
               </div>
 
-              <div className="w-3/5 flex justify-center items-center border-[#d1dad7] py-2 px-2 text-[#d1dad7]">
-                activiteit
+              <div className="w-3/5 flex justify-center flex-col items-center border-[#d1dad7] py-2 px-2 text-[#d1dad7]">
+                <span className="w-full text-lg font-semibold">
+                  Roxane van Ieperen
+                </span>
+                <span className="w-full text-sm">
+                  Dat beloof ik’ van Roxane van Iperen raakt aan persoonlijke
+                  ervaringen en grote vragen over menselijke relaties.
+                </span>
               </div>
 
               <div className="w-1/5 py-2 flex justify-center items-center px-2 hover:bg-lime-950 opacity-70 hover:opacity-100 transition duration-500">
@@ -36,8 +42,9 @@ const Agenda = () => {
                   alt=""
                 />
                 <a
-                  href="'../../../../images/roxane.png"
-                  download
+                  href="../../../../images/roxane.png"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex justify-center items-center absolute cursor-pointer"
                 >
                   <Image
@@ -45,7 +52,7 @@ const Agenda = () => {
                     width={20}
                     height={20}
                     alt="download"
-                    className="w-8 h-auto max-mobile:w-6"
+                    className="w-8 h-auto max-mobile:w-6 "
                   />
                 </a>
               </div>
@@ -56,8 +63,15 @@ const Agenda = () => {
                 11-12
               </div>
 
-              <div className="w-3/5 flex justify-center items-center border-[#d1dad7] py-2 px-2 text-[#d1dad7]">
-                activiteit
+              <div className="w-3/5 flex flex-col justify-center items-center border-[#d1dad7] py-2 px-2 text-[#d1dad7]">
+                <span className="w-full text-lg font-semibold">
+                  Retraite 2024
+                </span>
+
+                <span className="w-full text-sm">
+                  Wil je herbronnen? Zoek je balans in je drukke leven?
+                  Kennismaken op het plein tussen kerk, cultuur en kroeg?
+                </span>
               </div>
 
               <div className="w-1/5 py-2 flex justify-center items-center px-2 hover:bg-lime-950 opacity-70 hover:opacity-100 transition duration-500">
@@ -70,8 +84,9 @@ const Agenda = () => {
                   alt=""
                 />
                 <a
-                  href="'../../../../images/roxane.png"
-                  download
+                  href="../../../../images/retraite.png"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex justify-center items-center absolute cursor-pointer"
                 >
                   <Image

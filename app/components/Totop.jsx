@@ -26,7 +26,7 @@ const Totop = () => {
       {showButton ? (
         <div className="fixed bottom-6 right-4">
           <button
-            className="w-20 h-20 rounded-full border-2 border-[#5a645c] text-[#474e48] text-xl font-semibold"
+            className="w-20 h-20 rounded-full border-2 border-[#5a645c] text-[#474e48] text-xl font-semibold max-sm:w-14 max-sm:h-14 max-sm:text-sm"
             onClick={scrollToTop}
           >
             to top
