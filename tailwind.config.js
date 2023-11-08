@@ -17,6 +17,7 @@ module.exports = {
         headerimg: "1050px",
         footermenu: "875px",
         thumbs: "650px",
+        agenda: "500px",
         xsm: "460px",
         mobile: "420px",
       },

@@ -10,6 +10,7 @@ import linkedin from "../../public/icons/socials/linkedin.png";
 import twitter from "../../public/icons/socials/twitter.png";
 
 const Footer = () => {
+  
   const [email, setEmail] = useState("");
 
   const handleChange = (e) => {

@@ -8,6 +8,7 @@ import logo from "../../public/icons/leerhuislogo.png";
 import Link from "next/link";
 
 const Navbar = ({children}) => {
+  
   const [scrolled, setScrolled] = useState(false);
   const [showMenuOverlay, setShowMenuOverlay] = useState(false);
 
