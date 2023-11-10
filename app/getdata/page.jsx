@@ -4,7 +4,7 @@ import DropDown from "../components/DropDown";
 
 const GetData = async () => {
   const file = await fs.readFile(
-    process.cwd() + "/app/assets/data.json",
+    process.cwd() + "/app/assets/menu.json",
     "utf8"
   );
   const data = JSON.parse(file);

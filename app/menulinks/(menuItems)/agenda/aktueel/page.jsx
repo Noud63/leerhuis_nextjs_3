@@ -3,9 +3,6 @@ import Header from '@/app/components/Header';
 
 const Aktueel = () => {
   return (
-
-      <>
-        <Header />
         <div className="contact w-full min-h-screen flex flex-col items-center justify-start mb-40">
           <span className="w-full mt-[40px] flex justify-center text-green-950 text-2xl font-semibold">
             Aktueel
@@ -14,7 +11,6 @@ const Aktueel = () => {
             &nbsp;
           </div>
         </div>
-      </>
     
   );
 }

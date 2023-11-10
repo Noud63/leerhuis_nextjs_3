@@ -1,3 +1,4 @@
+
 export const agenda = [
   {
     id: 0,
@@ -64,3 +65,4 @@ export const agenda = [
       " Wil je herbronnen? Zoek je balans in je drukke leven? Kennismaken op het plein tussen kerk, cultuur en kroeg?",
   },
 ];
+

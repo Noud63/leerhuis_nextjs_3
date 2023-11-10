@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import logo2 from "../../public/icons/leerhuislogo2.png";
-import data from "../assets/data.json";
+import data from "../assets/menu.json";
 import FooterMenu from "./FooterMenu";
 import facebook from "../../public/icons/socials/facebook.png";
 import insta from "../../public/icons/socials/insta.png";
